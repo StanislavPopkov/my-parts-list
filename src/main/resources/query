@@ -1,0 +1,23 @@
+DROP DATABASE IF EXISTS test;
+CREATE DATABASE IF NOT EXISTS test;
+use test;
+CREATE TABLE component(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(45) NOT NULL,
+    necessity BOOLEAN NOT NULL DEFAULT FALSE,
+    amount INT);
+
+INSERT INTO component (`name`, `necessity`, `amount`) VALUES ('SSD', 0, 5),
+                                                             ('Cooler', 1, 4),
+                                                             ('HDD', 1, 3),
+                                                             ('MainBoard', 1, 8),
+                                                             ('Monitor', 0, 4),
+                                                             ('Mouse', 0, 3),
+                                                             ('Power block', 1, 5),
+                                                             ('Power cable', 1, 7),
+                                                             ('Processor', 1, 4),
+                                                             ('RAM DDR3', 1, 5),
+                                                             ('SoundCard', 0, 4),
+                                                             ('KeyBoard', 1, 5),
+                                                             ('Case', 0, 3),
+                                                             ('Wi-Fi adapter', 0, 7);
